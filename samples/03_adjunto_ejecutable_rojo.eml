@@ -1,0 +1,29 @@
+Return-Path: <facturacion@proveedor-desconocido.net>
+Delivered-To: analista@empresa-local.cr
+Received: from smtp.proveedor-desconocido.net (203.0.113.88)
+        by mx.empresa-local.cr with ESMTPS id msg003
+        for <analista@empresa-local.cr>; Sat, 21 Nov 2026 14:05:40 -0600
+Authentication-Results: mx.empresa-local.cr;
+        spf=softfail;
+        dkim=fail;
+        dmarc=none
+From: "Departamento de Cobros" <facturacion@proveedor-desconocido.net>
+To: <analista@empresa-local.cr>
+Subject: Factura vencida #4092 - Descargue comprobante
+Date: Sat, 21 Nov 2026 14:05:33 -0600
+Message-ID: <55443322@proveedor-desconocido.net>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_Boundary_Mixed_003"
+
+------=_Boundary_Mixed_003
+Content-Type: text/plain; charset="UTF-8"
+
+Adjuntamos el detalle de su factura pendiente en formato PDF.
+
+------=_Boundary_Mixed_003
+Content-Type: application/x-msdownload; name="Factura_Pendiente.pdf.exe"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Factura_Pendiente.pdf.exe"
+
+TVotVEVTVC1RQVlMT0FE
+------=_Boundary_Mixed_003--

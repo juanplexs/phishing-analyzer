@@ -1,0 +1,25 @@
+Return-Path: <companero@empresa-local.cr>
+Delivered-To: analista@empresa-local.cr
+Received: from mail.empresa-local.cr (200.91.140.15)
+        by mx.empresa-local.cr with ESMTPS id msg001
+        for <analista@empresa-local.cr>; Sat, 21 Nov 2026 09:15:00 -0600
+Authentication-Results: mx.empresa-local.cr;
+        spf=pass smtp.mailfrom=empresa-local.cr;
+        dkim=pass header.d=empresa-local.cr header.s=selector1;
+        dmarc=pass (p=REJECT)
+DKIM-Signature: v=1; a=rsa-sha256; d=empresa-local.cr; s=selector1; b=abc123dummy==
+From: "Carlos Mendez" <companero@empresa-local.cr>
+To: <analista@empresa-local.cr>
+Subject: Minuta de la reunion de hoy
+Date: Sat, 21 Nov 2026 09:14:55 -0600
+Message-ID: <20261121091455.001@empresa-local.cr>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+
+Hola equipo,
+
+Les confirmo que la revision de servidores quedo lista sin novedades.
+Nos vemos el lunes a las 8:00 AM.
+
+Saludos,
+Carlos
