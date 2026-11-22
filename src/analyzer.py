@@ -1,6 +1,6 @@
 from eml_parser import parse_eml
 from urllib.parse import urlparse
-
+from threat_intel import check_hash_vt
 def check_headers(headers):
     score = 0
     alertas = []
@@ -101,11 +101,20 @@ def analyze_email(file_path):
     pts_auth, al_auth = check_auth(datos["auth"])
     pts_urls, al_urls = check_urls(datos["urls"], datos["headers"]["from_domain"])
     pts_adj, al_adj = check_attachments(datos["attachments"])
+    pts_vt = 0
+    al_vt = []
+    for adj in datos["attachments"]:
+        vt = check_hash_vt(adj["sha256"])
+        adj["vt_result"] = vt
+        if vt["status"] == "found" and vt["malicious"] > 0:
+            pts_vt += 50
+            al_vt.append(
+                f"VirusTotal: {adj['filename']} detectado como malicioso por {vt['malicious']} motores"
+            )
+    total_score = pts_head + pts_auth + pts_urls + pts_adj + pts_vt
+    todas_alertas = al_head + al_auth + al_urls + al_adj + al_vt
 
-    total_score = pts_head + pts_auth + pts_urls + pts_adj
-    todas_alertas = al_head + al_auth + al_urls + al_adj
-
-    if pts_adj >= 50 or total_score >= 170:
+    if pts_adj >= 50 or pts_vt >= 50 or total_score >= 170:
         veredicto = "ROJO (Malicioso)"
     elif total_score >= 30:
         veredicto = "NARANJA (Sospechoso)"
